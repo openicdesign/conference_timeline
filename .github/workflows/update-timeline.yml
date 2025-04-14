@@ -2,8 +2,10 @@ name: Update Timeline Chart
 
 on:
   push:
+    branches:
+      - main
     paths:
-      - tasks.xlsx
+      - '**/tasks.xlsx'
 
 jobs:
   build:
