@@ -27,5 +27,13 @@ jobs:
     - name: Generate Gantt Chart
       run: |
         python plot_timeline.py
+
+    - name: Commit Updated Chart
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git add timeline_latest.png
+        git diff --cached --quiet || git commit -m "Auto-update timeline_latest.png"
+        git push
       
 
