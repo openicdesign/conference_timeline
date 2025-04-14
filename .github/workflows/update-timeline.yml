@@ -25,5 +25,7 @@ jobs:
         pip install pandas matplotlib openpyxl
 
     - name: Generate Gantt Chart
-      run: python plot_timeline.py
+      run: |
+        python plot_timeline.py
+      
 
