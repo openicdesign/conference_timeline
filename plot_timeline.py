@@ -77,10 +77,10 @@ for i, row in enumerate(df.itertuples()):
             va='center', ha='left', fontsize=10, color='blue', style='italic')
 
     # Draw a horizontal dashed line from the leftmost part of the graph to the start date of each task
-    ax.hlines(i, x_min, start_date, color='black', linestyle='--', linewidth=1)
+    ax.hlines(i, x_min, start_date, color='black', linestyle='--', linewidth=0.8)
 
 # Highlight today's date
-ax.axvline(today, color='red', linestyle='--', linewidth=1.2, zorder=0)
+ax.axvline(today, color='red', linestyle='--', linewidth=1.4, zorder=0)
 
 # Get y-axis limits for positioning
 ymin, ymax = ax.get_ylim()
@@ -92,7 +92,7 @@ ax.text(today, - label_offset - 0.5, f"Today: {today.strftime('%Y-%m-%d')}",
 
 # Configure axes
 ax.set_yticks(range(len(df)))
-ax.set_yticklabels(df["Task Name"], fontsize=10)
+ax.set_yticklabels(df["Task Name"], fontsize=10, weight='bold')
 ax.invert_yaxis()
 
 # Format x-axis: Automatically adjust the interval based on the date range
@@ -111,7 +111,7 @@ plt.xticks(rotation=45, fontsize=9)
 ax.set_xlim(x_min, x_max)
 
 # Aesthetics
-plt.title("Project Timeline", fontsize=16, weight='bold')
+plt.title("IC Conferences' Timeline", fontsize=16, weight='bold')
 plt.xlabel("Date", fontsize=11)
 plt.grid(True, axis='x', linestyle='--', linewidth=0.5, alpha=0.6)
 plt.tight_layout()

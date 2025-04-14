@@ -61,7 +61,7 @@ If a `timeline_latest.png` already exists, the script will prompt you to rename 
 
 - A PNG file named **`timeline_latest.png`** is saved in the same folder.
 
-  ![timeline_latest](./timeline_latest.png)
+  ![timeline_latest](https://raw.githubusercontent.com/openicdesign/conference_timeline/main/timeline_latest.png?ts=2)
 
 - Example visualization elements:
   - 📅 Duration labels above each bar
