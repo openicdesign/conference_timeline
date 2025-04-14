@@ -25,5 +25,3 @@ jobs:
     - name: Generate Gantt Chart
       run: python plot_timeline.py
 
-    - name: Commit and Push Updated Chart
-      run: python plot_timeline.py
