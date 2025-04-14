@@ -50,7 +50,7 @@ pip install pandas matplotlib openpyxl
 2. Run the script:
 
 ```bash
-python timeline_generator.py
+python plot_timeline.py
 ```
 
 If a `timeline_latest.png` already exists, the script will prompt you to rename it to `timeline_old.png`.
@@ -95,7 +95,7 @@ After running the script, you'll see this message:
 
 - Ensure your Excel dates are properly formatted as `Date` cells.
 - The script reverses the task order (most recent at the top) for a more intuitive top-down view.
-- You can rename the script file from `timeline_generator.py` to whatever you'd like.
+- You can rename the script file from `plot_timeline.py` to whatever you'd like.
 
 ---
 
