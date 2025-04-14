@@ -1,0 +1,29 @@
+name: Update Timeline Chart
+
+on:
+  push:
+    paths:
+      - tasks.xlsx
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'
+
+    - name: Install Dependencies
+      run: |
+        pip install pandas matplotlib openpyxl
+
+    - name: Generate Gantt Chart
+      run: python plot_timeline.py
+
+    - name: Commit and Push Updated Chart
+      run: python plot_timeline.py
