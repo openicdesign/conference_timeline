@@ -11,14 +11,17 @@ df = pd.read_excel(file_path)
 
 # Check for existing timeline image
 if os.path.exists("timeline_latest.png"):
-    print("⚠️ 'timeline_latest.png' already exists.")
-    choice = input("Do you want to rename it to 'timeline_old.png'? (y/n): ").strip().lower()
-    if choice == 'y':
-        os.rename("timeline_latest.png", "timeline_old.png")
-        print("✔️ Renamed to 'timeline_old.png'")
-    else:
-        print("❗Please rename or remove 'timeline_latest.png' before proceeding.")
-        exit()
+    os.rename("timeline_latest.png", "timeline_old.png")
+    print("✔️ Auto-renamed previous timeline to 'timeline_old.png'")
+
+    # print("⚠️ 'timeline_latest.png' already exists.")
+    # choice = input("Do you want to rename it to 'timeline_old.png'? (y/n): ").strip().lower()
+    # if choice == 'y':
+    #     os.rename("timeline_latest.png", "timeline_old.png")
+    #     print("✔️ Renamed to 'timeline_old.png'")
+    # else:
+    #     print("❗Please rename or remove 'timeline_latest.png' before proceeding.")
+    #     exit()
 
 # Convert dates
 df['Start Date'] = pd.to_datetime(df['Start Date'])
